@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,900;1,300;1,400;1,900&display=swap");
+
+html {
+  height: 100%;
+  width: 100%;
+}
+html {
+  height: 100%;
+  width: 100%;
+}
+/*Background styling*/
+body {
+  font-family: "Roboto", Helvetica, sans-serif;
+  font-size: 14pt;
+  background-color: #786978;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.6;
+  flex: 1;
+  padding: 20px;
+}
+.container {
+  margin: 40px;
+  max-width: 800px;
+}
+
+/* Style the tab bar itself NOT THE BUTTONS*/
+.tab-bar {
+  background-color: #f1f1f1;
+  text-align: center;
+  min-width: 826px;
+}
+/* Style the buttons on the tab bar*/
+.tab-bar button {
+  background-color: inherit;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  margin: 10px;
+  outline: none;
+  padding: 14px 16px;
+  text-align: center;
+  transition: 0.3s;
+  width: 200px;
+}
+
+/* Change background color of buttons on hover */
+.tab-bar button:hover {
+  background-color: #ccc;
+}
+
+/* Color the active/current tab */
+.tab-bar button.active {
+  background-color: #adcbcb;
+}
+
+/* Style the tab content */
+.tabcontent {
+  background-color: #d6d6e5;
+  display: none;
+  padding: 6px 12px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  width: 802px;
+}
+
+/* Makes page text headers centered */
+h2{
+  text-align: center;
+}
+/* Style the calculated table*/
+.results-table {
+  border-collapse: collapse;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.35);
+  margin: 25px 0;
+}
+.results-table th {
+  background-color: #5b5b74;
+  font-weight: normal;
+  color: #f1f1f1;
+}
+/* alternating stripe colors in calculated table */
+.results-table tr:nth-child(even) {
+  background-color: #b5b5e5;
+}
+.results-table tr:nth-child(odd) {
+  background-color: #f1f1f1;
+}
+/*Text of the results table is centered */
+.results-table td {
+  text-align: center;
+}
+
+/*input table formatting */
+/*Number input for weight */
+.weight-input {
+  font-size: large;
+  width: 342px;
+}
+/* Dropdown input for schedule and indication formatting */
+select {
+  font-size: large;
+  width: 350px;
+}
+.inputs-table-label {
+  text-align: right;
+  padding-left: 15px;
+  padding-right: 10px;
+}
+/* ngl I have no idea what this does but stuff breaks if it's not here*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* format of all the notes on the bottom of the calculator page */
+.dosage-note {
+  font-weight: bold;
+  color: #0b0b0e;
+  text-align: left;
+}
+
+/*styling weekly products table */
+#weekly-products-table {
+  border-collapse: collapse;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.35);
+  margin: 25px 0;
+  width: 100%;
+  text-align: center;
+}
+#weekly-products-table th {
+  background-color: #5b5b74;
+  font-weight: normal;
+  color: #f1f1f1;
+}
+.dose-message {
+  width: 75%;
+}
+#weekly-products-table tr:nth-child(even) {
+  background-color: #b5b5e5;
+}
+#weekly-products-table tr:nth-child(odd) {
+  background-color: #f1f1f1;
+}
+
+
+/*background page list formatting*/
+.main-bullet {
+  font-weight: bold;
+}
+
+/* Firefox specific formatting*/
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+/*makes hyperlink text black which much more visually appealing versus the standard blue */
+a {
+  color: #0b0b0e;
+}
