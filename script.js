@@ -110,8 +110,8 @@ else gmdWeeklyProductTable.style.display = "none";
      // If the checkbox is checked, then shows the dosage note which was a pain in the butt to format here
       if (gmdWantWeekly.checked === true)  dosageNote.style.display = "";
       else dosageNote.style.display = "none";
-      dosageNote.textContent = "Skytrofa is dosed at 0.24mg/kg/week and rounded to the recommended dosing per child's\r\n";
-      dosageNote.textContent += "weight available in detail in the package insert.\r\n"; 
+      dosageNote.textContent = "Skytrofa indicated for patients 1 year and older and is dosed at 0.24mg/kg/week and rounded to the recommended dosing per child's\r\n";
+      dosageNote.textContent += "weight using the chart available in detail in the package insert.\r\n"; 
       dosageNote.textContent += "Sogroya is indicated for patients 2.5 years and older at an initial dose of 0.16mg/kg/week \r\n";
       dosageNote.textContent +="to a max of 8mg/week.";
      
