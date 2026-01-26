@@ -99,6 +99,7 @@ else gmdWeeklyProductTable.style.display = "none";
       upperNorditropinFactor = 0.24;
       skytrofaFactor = 0.24;
       sogroyaFactor =0.16;
+      ngenlaFactor = 0.66;
 
       //shows checkbox option on GHD only (since weekly products are only indicated in GHD)
       gmdWeeklyProductRow.style.display = "";
@@ -110,10 +111,12 @@ else gmdWeeklyProductTable.style.display = "none";
      // If the checkbox is checked, then shows the dosage note which was a pain in the butt to format here
       if (gmdWantWeekly.checked === true)  dosageNote.style.display = "";
       else dosageNote.style.display = "none";
-      dosageNote.textContent = "Skytrofa indicated for patients 1 year and older and is dosed at 0.24mg/kg/week and rounded to the recommended dosing per child's\r\n";
-      dosageNote.textContent += "weight using the chart available in detail in the package insert.\r\n"; 
-      dosageNote.textContent += "Sogroya is indicated for patients 2.5 years and older at an initial dose of 0.16mg/kg/week \r\n";
-      dosageNote.textContent +="to a max of 8mg/week.";
+      dosageNote.textContent ="Skytrofa is indicated for patients 1 year and older and is dosed \r\n";
+      dosageNote.textContent +="at 0.24mg/kg/week and rounded to the recommended dose \r\n";
+      dosageNote.textContent +="using the chart available in detail in the package insert.\r\n";
+      dosageNote.textContent +="Sogroya is indicated for patients 2.5 years and older at an initial dose of 0.16mg/kg/week \r\n";
+      dosageNote.textContent +="to a max of 8mg/week.\r\n";
+      dosageNote.textContent +="Ngenla is indicated for patients 3 years and older dosed at 0.66mg/kg. \r\n";
      
       break;
 
@@ -256,6 +259,7 @@ else gmdWeeklyProductTable.style.display = "none";
 //adding the specific weekly agents' messages to the table cells
   document.getElementById("skytrofa-dose-message").textContent = (getRecommendedDose(weightInKg));
   document.getElementById("sogroya-dose-message").textContent = (limitToMax((weightInKg * sogroyaFactor), 8)).toFixed(2) + " mg";
+  document.getElementById("ngenla-dose-message").textContent = (getRecommendedDose(weightInKg));
 }
 //adapted the table from the Sogroya PI to return the recommended dose based on the weight inputted
 function getRecommendedDose(weightInKg) {
