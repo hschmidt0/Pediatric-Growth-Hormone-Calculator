@@ -108,15 +108,14 @@ else gmdWeeklyProductTable.style.display = "none";
       if (gmdWantWeekly.checked === true) gmdWeeklyProductRow.style.display = "";
       else gmdWeeklyProductTable.style.display = "none";  
 
-     // If the checkbox is checked, then shows the dosage note which was a pain in the butt to format here
+     // If the checkbox is checked, then shows the dosage note for the 3 weekly products
       if (gmdWantWeekly.checked === true)  dosageNote.style.display = "";
       else dosageNote.style.display = "none";
-      dosageNote.textContent ="Skytrofa is indicated for patients 1 year and older and is dosed \r\n";
-      dosageNote.textContent +="at 0.24mg/kg/week and rounded to the recommended dose \r\n";
-      dosageNote.textContent +="using the chart available in detail in the package insert.\r\n";
-      dosageNote.textContent +="Sogroya is indicated for patients 2.5 years and older at an initial dose of 0.16mg/kg/week \r\n";
-      dosageNote.textContent +="to a max of 8mg/week.\r\n";
-      dosageNote.textContent +="Ngenla is indicated for patients 3 years and older dosed at 0.66mg/kg. \r\n";
+      dosageNote.textContent ="Skytrofa is indicated for patients 1 year and older and is dosed at 0.24mg/kg/week\r\n";
+      dosageNote.textContent +="and rounded to the recommended dose using the chart available in detail in the package insert.\r\n";
+      dosageNote.textContent +="Sogroya is indicated for patients 2.5 years and older at an initial dose of 0.16mg/kg/week\r\n";
+      dosageNote.textContent +="titrated to patient response with a max single dose of 8mg.\r\n";
+      dosageNote.textContent +="Ngenla is indicated for patients 3 years and older dosed at 0.66mg/kg with a max single dose of 30mg\r\n";
      
       break;
 
@@ -259,9 +258,9 @@ else gmdWeeklyProductTable.style.display = "none";
 //adding the specific weekly agents' messages to the table cells
   document.getElementById("skytrofa-dose-message").textContent = (getRecommendedDose(weightInKg));
   document.getElementById("sogroya-dose-message").textContent = (limitToMax((weightInKg * sogroyaFactor), 8)).toFixed(2) + " mg";
-  document.getElementById("ngenla-dose-message").textContent = (getRecommendedDose(weightInKg));
+  document.getElementById("ngenla-dose-message").textContent = (limitToMax((weightInKg * ngenlaFactor), 30)).toFixed(2) + " mg";
 }
-//adapted the table from the Sogroya PI to return the recommended dose based on the weight inputted
+//adapted the table from the Skytrofa PI to return the recommended dose based on the weight inputted
 function getRecommendedDose(weightInKg) {
   if (weightInKg >= 11.5 && weightInKg <= 13.9) {
     return 3 + " mg";
@@ -291,7 +290,7 @@ function getRecommendedDose(weightInKg) {
     return "Only approved for patients weighing between 11.5 kg to 100 kg";
   }
 }
-// Skytrofa's dose is 0.16mg/kg until the max of 8mg where this function will always return 8mg
+// Sogroya's dose is 0.16mg/kg until the max of 8mg where this function will always return 8mg. Also applicable to Ngenla at 0.66mg/kg until 30mg max
 function limitToMax(value, maxValue) {
   if (value > maxValue) {
     return maxValue;
