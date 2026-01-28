@@ -111,11 +111,11 @@ else gmdWeeklyProductTable.style.display = "none";
      // If the checkbox is checked, then shows the dosage note for the 3 weekly products
       if (gmdWantWeekly.checked === true)  dosageNote.style.display = "";
       else dosageNote.style.display = "none";
-      dosageNote.textContent ="Skytrofa is indicated for patients 1 year and older and is dosed at 0.24mg/kg/week\r\n";
-      dosageNote.textContent +="and rounded to the recommended dose using the chart available in detail in the package insert.\r\n";
+      dosageNote.textContent ="Skytrofa is indicated for patients 1 year and older and is dosed at 0.24mg/kg/week and\r\n";
+      dosageNote.textContent +="rounded to the recommended dose using the chart available in detail in the package insert.\r\n";
       dosageNote.textContent +="Sogroya is indicated for patients 2.5 years and older at an initial dose of 0.16mg/kg/week\r\n";
-      dosageNote.textContent +="titrated to patient response with a max single dose of 8mg.\r\n";
-      dosageNote.textContent +="Ngenla is indicated for patients 3 years and older dosed at 0.66mg/kg with a max single dose of 30mg\r\n";
+      dosageNote.textContent +="titrated to patient response. Max single dose of 8mg.\r\n";
+      dosageNote.textContent +="Ngenla is indicated for patients 3 years and older dosed at 0.66mg/kg. Max single dose of 30mg\r\n";
      
       break;
 
